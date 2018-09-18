@@ -14,32 +14,32 @@ const Sidebar = (props) => {
   return (
     <div className="Sidebar">
       <div className="sidebar-lines">
-        <img className="icon" src={hours} alt="hours" />
+        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/hours.png'} alt="hours" />
         <div className="sidebar-text">
           <CurrentHours times={info.times} />
         </div>
       </div>
       <div className="sidebar-lines">
-        <img style={{ marginLeft: 2 }} className="icon" src={location} alt="location" />
+        <img style={{ marginLeft: 2 }} className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/location.png'} alt="location" />
         <div className="sidebar-text">
           {info.location ? info.location.address : 'Loading'}
           , San Francisco, CA 94112, USA
         </div>
       </div>
       <div className="sidebar-lines">
-        <img className="icon" src={phone} alt="phone" />
+        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/phone.png'} alt="phone" />
         <div className="sidebar-text">
           {info.phone ? `(${info.phone.slice(0, 3)}) ${info.phone.slice(4)}` : 'Loading'}
         </div>
       </div>
       <div className="sidebar-lines">
-        <img className="icon" src={website} alt="website" />
+        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/website.png'} alt="website" />
         <div className="sidebar-text">
           {info.website}
         </div>
       </div>
       <div className="sidebar-lines">
-        <img style={{ marginLeft: 2 }} className="icon" src={directions} alt="directions" />
+        <img style={{ marginLeft: 2 }} className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/directions.png'} alt="directions" />
         <div className="sidebar-text">
           Get Directions
         </div>
