@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Sidebar from './components/Sidebar';
+import './index.css'
 
 
 class App extends React.Component {
@@ -35,7 +36,7 @@ class App extends React.Component {
       return <div />;
     }
     return (
-      <div className="app">
+      <div id="sticky">
         <Sidebar info={restaurant.businessInfo} />
       </div>
     );
