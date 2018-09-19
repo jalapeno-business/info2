@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   getBusinessInfo(id) {
-    axios.get(`http://localhost:1177/restaurant/${id}/info`)
+    axios.get(`/api/restaurant/info/${id}`)
       .then((response) => {
         this.setState({
           restaurant: response.data,
