@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hours from './Hours';
+import './CurrentHours.css';
 
 export default class CurrentHours extends React.Component {
   constructor(props) {
@@ -72,22 +73,22 @@ export default class CurrentHours extends React.Component {
     const currentDayTimes = times[currDay];
     const openNow = (
       <div>
-        <b>Open Now</b>
+        <span className="hours-spacing"><b>Open Now</b></span>
          ·
-        {currentDayTimes[0]}
+        <span className="hours-spacing">{currentDayTimes[0]}</span>
          -
-        {currentDayTimes[1]}
+        <span className="hours-spacing">{currentDayTimes[1]}</span>
       </div>);
     const nextDay = this.days[(
       this.days.findIndex(findDay => findDay === currDay) + 1
     )] || this.days[0];
     const openTom = (
       <div>
-        <b>Closed Now</b>
+        <span className="hours-spacing"><b>Closed Now</b></span>
          · Opens
-        {nextDay}
+        <span className="hours-spacing">{nextDay}</span>
          at
-        {times[nextDay][0]}
+        <span className="hours-spacing">{times[nextDay][0]}</span>
       </div>);
 
     return (
@@ -100,7 +101,10 @@ export default class CurrentHours extends React.Component {
         <div>
           {
             extend && (
-              this.days.map(day => <Hours day={day} businessHours={times[day]} currDay={currDay} />)
+              this.days.map((day, index) => <Hours 
+                key={`${new Date().getTime()}${index}`} 
+                day={day} businessHours={times[day]} 
+                currDay={currDay} />)
             )
           }
         </div>
