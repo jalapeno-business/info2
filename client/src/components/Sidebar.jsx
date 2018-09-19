@@ -2,11 +2,6 @@ import React from 'react';
 import './Sidebar.css';
 import PropTypes from 'prop-types';
 import CurrentHours from './CurrentHours';
-import hours from './images/hours.png';
-import location from './images/location.png';
-import phone from './images/phone.png';
-import website from './images/website.png';
-import directions from './images/directions.png';
 
 const Sidebar = (props) => {
   const { info } = props;
