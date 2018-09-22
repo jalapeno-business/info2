@@ -73,7 +73,7 @@ export default class CurrentHours extends React.Component {
     const currentDayTimes = times[currDay];
     const openNow = (
       <div>
-        <span className="hours-spacing"><b>Open Now</b></span>
+        <span className="hours-spacing"><span className="bold">Open Now</span></span>
          ·
         <span className="hours-spacing">{currentDayTimes[0]}</span>
          -
@@ -84,7 +84,7 @@ export default class CurrentHours extends React.Component {
     )] || this.days[0];
     const openTom = (
       <div>
-        <span className="hours-spacing"><b>Closed Now</b></span>
+        <span className="hours-spacing"><span className="bold">Closed Now</span></span>
          · Opens
         <span className="hours-spacing">{nextDay}</span>
          at

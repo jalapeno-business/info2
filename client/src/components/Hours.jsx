@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CurrentHours.css';
 
 const Hours = (props) => {
   const { day, businessHours, currDay } = props;
@@ -14,7 +15,7 @@ const Hours = (props) => {
   );
   return (
     currDay === day
-      ? <b>{openHours}</b>
+      ? <span className="bold">{openHours}</span>
       : openHours
   );
 };
