@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CurrentHours.css';
+import './Hours.css';
 
 const Hours = (props) => {
   const { day, businessHours, currDay } = props;
   const openHours = (
-    <div>
-      {day}
-      -
-      {businessHours[0]}
-      -
-      {businessHours[1]}
+    <div className="hours">
+      <span className="text">
+        {day}
+      </span>
+      <span id="divider"></span>
+      <span className="text">
+        {businessHours[0]} - {businessHours[1]}
+      </span>
     </div>
   );
   return (
     currDay === day
-      ? <span className="bold">{openHours}</span>
+      ? <span id="bold">{openHours}</span>
       : openHours
   );
 };

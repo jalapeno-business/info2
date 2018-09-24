@@ -5,3 +5,8 @@
 .bold {
   font-weight: 700;
 }
+
+#allHours {
+  color: #101820;
+  margin-top: 1em;
+}

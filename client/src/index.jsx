@@ -37,7 +37,9 @@ class App extends React.Component {
     }
     return (
       <div id="sticky">
-        <Sidebar info={restaurant.businessInfo} />
+        <div id="sticky-content">
+          <Sidebar info={restaurant.businessInfo} />
+        </div>
       </div>
     );
   }
