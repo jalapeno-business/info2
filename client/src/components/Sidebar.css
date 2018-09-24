@@ -10,11 +10,22 @@
   margin-bottom: 8px;
 }
 
+.sidebar-lines:hover {
+  color: #b70038;
+}
+
 .sidebar-text {
   padding: 6px 0;
 }
 
-.icon {
+img {
   height: 22px;
   margin: 4px 24px 4px 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  frameborder: 0;
+  border: 0;
 }
