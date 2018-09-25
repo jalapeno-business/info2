@@ -7,38 +7,44 @@ const Sidebar = (props) => {
   const { info } = props;
 
   return (
-    <div className="Sidebar">
+    <div id="Sidebar">
       <div className="sidebar-lines">
-        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/hours.png'} alt="hours" />
+        <img style={{ marginRight: '20px' }} src={'https://s3.us-east-2.amazonaws.com/zagat-fec/webpImages/hours.webp'} alt="hours" />
         <div className="sidebar-text">
           <CurrentHours times={info.times} />
         </div>
       </div>
       <div className="sidebar-lines">
-        <img style={{ marginLeft: 2 }} className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/location.png'} alt="location" />
+        <img style={{ marginLeft: 2 }} src={'https://s3.us-east-2.amazonaws.com/zagat-fec/webpImages/location.webp'} alt="location" />
         <div className="sidebar-text">
           {info.location ? info.location.address : 'Loading'}
           , San Francisco, CA 94112, USA
         </div>
       </div>
       <div className="sidebar-lines">
-        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/phone.png'} alt="phone" />
+        <img src={'https://s3.us-east-2.amazonaws.com/zagat-fec/webpImages/phone.webp'} alt="phone" />
         <div className="sidebar-text">
           {info.phone ? `(${info.phone.slice(0, 3)}) ${info.phone.slice(4)}` : 'Loading'}
         </div>
       </div>
       <div className="sidebar-lines">
-        <img className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/website.png'} alt="website" />
+        <img style={{ marginRight: '20px' }} src={'https://s3.us-east-2.amazonaws.com/zagat-fec/webpImages/website.webp'} alt="website" />
         <div className="sidebar-text">
           {info.website}
         </div>
       </div>
       <div className="sidebar-lines">
-        <img style={{ marginLeft: 2 }} className="icon" src={'https://s3.us-east-2.amazonaws.com/zagat-fec/directions.png'} alt="directions" />
+        <img style={{ marginLeft: 2 }} src={'https://s3.us-east-2.amazonaws.com/zagat-fec/webpImages/directions.webp'} alt="directions" />
         <div className="sidebar-text">
           Get Directions
         </div>
       </div>
+      <iframe 
+        id="map" 
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa2U7loWAhYARXXIPjJLMNcM&key=AIzaSyDGPFOU4mcUagfV6guERgET9DazUiwFAgo" 
+        allowFullScreen>
+      </iframe>
+
     </div>
   );
 };

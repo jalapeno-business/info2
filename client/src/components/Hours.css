@@ -1,0 +1,22 @@
+.hours {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#bold {
+  font-weight: 700;
+}
+
+#divider {
+  border-top: 1px #101820 dotted;
+  left: 0;
+  position: absolute;
+  top: .8em;
+  width: 100%;
+}
+
+.text {
+  background: white;
+  z-index: 1;
+}

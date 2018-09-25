@@ -1,4 +1,4 @@
-.Sidebar {
+#Sidebar {
   background-color: white;
   padding: 24px 32px;
   font: 10px;
@@ -10,11 +10,23 @@
   margin-bottom: 8px;
 }
 
-.sidebar-text {
-  padding: 6px 0;
+.sidebar-lines:hover {
+  color: #b70038;
 }
 
-.icon {
+.sidebar-text {
+  padding: 6px 0;
+  width: 100%;
+}
+
+#Sidebar img {
   height: 22px;
   margin: 4px 24px 4px 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  frameborder: 0;
+  border: 0;
 }

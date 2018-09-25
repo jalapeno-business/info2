@@ -37,11 +37,13 @@ class App extends React.Component {
     }
     return (
       <div id="sticky">
-        <Sidebar info={restaurant.businessInfo} />
+        <div id="sticky-content">
+          <Sidebar info={restaurant.businessInfo} />
+        </div>
       </div>
     );
   }
 }
 
-// ReactDOM.render(<App />, document.getElementById('app'));
-window.Info = App;
+ReactDOM.render(<App />, document.getElementById('zagat-info'));
+// window.Info = App;

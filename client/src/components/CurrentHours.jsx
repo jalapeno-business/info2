@@ -7,7 +7,7 @@ export default class CurrentHours extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      extend: false,
+      extended: false,
       currDay: 'Sunday',
       time: '12:00 AM',
       isOpen: false,
@@ -61,19 +61,19 @@ export default class CurrentHours extends React.Component {
   }
 
   handleClick() {
-    const { extend } = this.state;
+    const { extended } = this.state;
     this.setState({
-      extend: !extend,
+      extended: !extended,
     });
   }
 
   render() {
     const { times } = this.props;
-    const { currDay, isOpen, extend } = this.state;
+    const { currDay, isOpen, extended } = this.state;
     const currentDayTimes = times[currDay];
     const openNow = (
       <div>
-        <span className="hours-spacing"><b>Open Now</b></span>
+        <span className="hours-spacing"><span className="bold">Open Now</span></span>
          ·
         <span className="hours-spacing">{currentDayTimes[0]}</span>
          -
@@ -84,12 +84,16 @@ export default class CurrentHours extends React.Component {
     )] || this.days[0];
     const openTom = (
       <div>
-        <span className="hours-spacing"><b>Closed Now</b></span>
+        <span className="hours-spacing"><span className="bold">Closed Now</span></span>
          · Opens
         <span className="hours-spacing">{nextDay}</span>
          at
         <span className="hours-spacing">{times[nextDay][0]}</span>
       </div>);
+    const allHours = extended
+      ? "allHours"
+      : null
+    
 
     return (
       <div
@@ -98,9 +102,9 @@ export default class CurrentHours extends React.Component {
         role="presentation"
       >
         {isOpen ? openNow : openTom}
-        <div>
+        <div id={allHours}>
           {
-            extend && (
+            extended && (
               this.days.map((day, index) => <Hours 
                 key={`${new Date().getTime()}${index}`} 
                 day={day} businessHours={times[day]} 

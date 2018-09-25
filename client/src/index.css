@@ -1,4 +1,10 @@
 #sticky {
   position: sticky;
-  top: 2em;
+  top: 5.5vw;
+  padding-top: 2em;
+}
+
+#sticky-content {
+  max-height: calc(100vh - 80px - 40px);
+  overflow-y: auto;
 }
